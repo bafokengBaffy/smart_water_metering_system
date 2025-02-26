@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id 'dev.flutter.flutter-gradle-plugin'
+    // Apply the Google Services plugin
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.demo'
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion '27.0.12077973' // Explicitly set the NDK version
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8' // Set JVM target to 1.8 for Kotlin compatibility
+    }
+
+    defaultConfig {
+        applicationId 'com.example.demo'
+        minSdkVersion 23 // Updated to 23
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug // Debug signing config for development builds
+        }
+        release {
+            // Ensure proper signing config is used for release builds
+            signingConfig signingConfigs.debug
+            minifyEnabled true // Enable code shrinking
+            shrinkResources true // Enable resource shrinking
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:33.8.0')
+
+    // Add the dependencies for the desired Firebase products without specifying versions
+    implementation 'com.google.firebase:firebase-analytics'        // Firebase Analytics
+    implementation 'com.google.firebase:firebase-auth'             // Firebase Authentication
+    implementation 'com.google.firebase:firebase-firestore'        // Cloud Firestore
+    implementation 'com.google.firebase:firebase-database'         // Realtime Database
+    implementation 'com.google.firebase:firebase-storage'          // Firebase Storage
+    implementation 'com.google.firebase:firebase-messaging'        // Firebase Cloud Messaging
+    implementation 'com.google.firebase:firebase-crashlytics'      // Firebase Crashlytics
+    implementation 'com.google.firebase:firebase-config'           // Firebase Remote Config
+    implementation 'com.google.firebase:firebase-perf'             // Firebase Performance Monitoring
+    implementation 'com.google.firebase:firebase-inappmessaging'   // Firebase In-App Messaging
+    implementation 'com.google.firebase:firebase-appcheck'         // Firebase App Check
+    implementation 'com.google.firebase:firebase-installations'    // Firebase Installations
+
+    // Other dependencies
+}
