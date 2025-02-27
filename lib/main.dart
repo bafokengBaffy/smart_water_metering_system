@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // For status bar style
-
 // Import screens
 import 'home_screen_admin.dart';
 import 'sign_in_screen.dart' as sign_in;
