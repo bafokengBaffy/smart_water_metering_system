@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "201555512766",
+    "project_id": "smart-water-metering-sys",
+    "storage_bucket": "smart-water-metering-sys.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201555512766:android:41d62f9e4d1394bbcabdef",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKrjZl2esqmYnw6DNBon2DtfIU9JZLvHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201555512766:android:8c52f505d3ae0355cabdef",
+        "android_client_info": {
+          "package_name": "com.example.smart_water_metering_system"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKrjZl2esqmYnw6DNBon2DtfIU9JZLvHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
